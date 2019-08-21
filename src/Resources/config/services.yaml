@@ -22,6 +22,10 @@ services:
       $bot_username: '%env(BOT_NAME)%'
       $clientHttp: '@guzzle_telegram_client'
 
+  telegram_bot:
+    public: true
+    alias: Porox\TelegramBotBundle\Service\TelegramService
+
   Longman\TelegramBot\Telegram:
     public: true
     alias: Porox\TelegramBotBundle\Service\TelegramService

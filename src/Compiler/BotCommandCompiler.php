@@ -22,7 +22,7 @@ class BotCommandCompiler implements CompilerPassInterface
      */
     public function process(ContainerBuilder $container)
     {
-        $definition = $container->findDefinition('app.telegram_bot');
+        $definition = $container->findDefinition('telegram_bot');
         $services = $container->findTaggedServiceIds('telegram_bot_command');
 
         foreach (array_keys($services) as $service) {
